@@ -2,56 +2,1389 @@
 <html lang="ru">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="theme-color" content="#17120f">
-<title>Ческыт №1 — концепт сайта</title>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Ческыт №1 — кафе · концепт сайта</title>
+<meta name="description" content="Концепт сайта кафе Ческыт №1 — меню, доставка, адреса и контакты.">
+
 <style>
-:root{color-scheme:dark;--gold:#f4c66a;--cream:#fff7e9;--muted:#d5c8b6}
+:root{
+  --bg:#0b0a09;
+  --panel:#14120f;
+  --panel2:#1b1813;
+  --cream:#f3eadb;
+  --muted:#b9ad9a;
+  --gold:#c99b42;
+  --gold2:#e3bd70;
+  --line:rgba(201,155,66,.28);
+}
+
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
-body{margin:0;background:#17120f;color:var(--cream);font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
-.page{width:min(1180px,100% - 32px);margin:0 auto}
-.hero{position:relative;isolation:isolate;display:flex;align-items:flex-end;min-height:clamp(430px,57vw,650px);margin:22px auto 0;overflow:hidden;border:1px solid #ffffff20;border-radius:26px;background:radial-gradient(ellipse at 72% 20%,#b56a27 0,transparent 40%),linear-gradient(115deg,#24160f,#63391f 54%,#18110d);box-shadow:0 24px 80px #0007}
-.hero-photo{position:absolute;z-index:-2;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 40%;opacity:.88}
-.hero:after{content:"";position:absolute;z-index:-1;inset:0;background:linear-gradient(90deg,rgba(18,12,9,.94) 0%,rgba(18,12,9,.77) 38%,rgba(18,12,9,.18) 100%),linear-gradient(0deg,rgba(18,12,9,.68),transparent 48%)}
-.content{max-width:690px;padding:clamp(26px,6vw,68px)}
-.eyebrow{display:inline-flex;align-items:center;gap:10px;margin:0 0 22px;color:var(--gold);font-size:12px;font-weight:800;letter-spacing:.18em;text-transform:uppercase}
-.eyebrow:before{content:"";width:28px;height:1px;background:var(--gold)}
-h1{max-width:680px;margin:0;font-size:clamp(38px,6.5vw,76px);line-height:.98;letter-spacing:-.055em;text-wrap:balance}
-h1 span{color:var(--gold)}
-.lead{max-width:490px;margin:24px 0 0;color:#f1e6d7;font-size:clamp(16px,2vw,19px);line-height:1.65}
-.chef{display:flex;align-items:center;gap:14px;margin-top:30px}
-.medal{display:grid;place-items:center;width:48px;height:48px;flex:0 0 48px;border:1px solid #f4c66a88;border-radius:50%;color:var(--gold);font-size:23px}
-.chef strong{display:block;font-size:16px;letter-spacing:.01em}
-.chef small{display:block;margin-top:5px;color:var(--muted);font-size:13px;line-height:1.5}
-.note{margin:10px 0 0;color:#d6c7b6;font-size:11px}
-.concept{padding:54px 0 70px;text-align:center}
-.concept .tag{color:var(--gold);font-size:11px;font-weight:800;letter-spacing:.2em;text-transform:uppercase}
-.concept h2{margin:12px 0 10px;font-size:clamp(28px,4vw,42px);letter-spacing:-.04em}
-.concept p{max-width:540px;margin:0 auto;color:var(--muted);font-size:15px;line-height:1.7}
-@media(max-width:620px){.page{width:min(100% - 20px,1180px)}.hero{min-height:560px;margin-top:10px;border-radius:19px}.hero-photo{object-position:58% center}.hero:after{background:linear-gradient(0deg,rgba(18,12,9,.96) 0%,rgba(18,12,9,.76) 45%,rgba(18,12,9,.12) 100%)}.content{padding:28px 23px 32px}.eyebrow{margin-bottom:17px;font-size:10px}h1{font-size:clamp(39px,11vw,56px)}.lead{margin-top:17px;font-size:15px}.chef{margin-top:22px}.concept{padding:42px 8px 55px}}
+
+body{
+  margin:0;
+  background:
+    radial-gradient(circle at 80% 0%,#292014 0,transparent 32%),
+    var(--bg);
+  color:var(--cream);
+  font-family:Arial,sans-serif;
+  line-height:1.55;
+}
+
+.wrap{
+  width:min(1180px,92%);
+  margin:auto;
+}
+
+a{
+  color:inherit;
+  text-decoration:none;
+}
+
+.top{
+  position:sticky;
+  top:0;
+  z-index:50;
+  background:rgba(11,10,9,.94);
+  backdrop-filter:blur(12px);
+  border-bottom:1px solid var(--line);
+}
+
+nav{
+  height:74px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:25px;
+}
+
+.logo{
+  font-family:Georgia,serif;
+  font-size:24px;
+  color:var(--gold2);
+  letter-spacing:.04em;
+}
+
+.logo small{
+  display:block;
+  font:11px Arial;
+  color:var(--muted);
+  letter-spacing:.18em;
+}
+
+.links{
+  display:flex;
+  gap:25px;
+  color:#ddd0bd;
+  font-size:14px;
+}
+
+.links a:hover{
+  color:var(--gold2);
+}
+
+.btn{
+  display:inline-block;
+  background:linear-gradient(135deg,var(--gold2),var(--gold));
+  color:#17120a;
+  padding:13px 20px;
+  border-radius:8px;
+  font-weight:700;
+  border:1px solid #e3bd70;
+  cursor:pointer;
+}
+
+.btn.ghost{
+  background:transparent;
+  color:var(--cream);
+  border-color:var(--line);
+}
+
+.hero{
+  min-height:720px;
+  display:flex;
+  align-items:center;
+  position:relative;
+  overflow:hidden;
+  border-bottom:1px solid var(--line);
+}
+
+.hero:before{
+  content:"";
+  position:absolute;
+  inset:25px;
+  border:1px solid rgba(201,155,66,.16);
+  pointer-events:none;
+}
+
+.hero .wrap{
+  position:relative;
+  padding:90px 0;
+}
+
+.eyebrow{
+  color:var(--gold2);
+  text-transform:uppercase;
+  letter-spacing:.18em;
+  font-size:12px;
+}
+
+.hero h1{
+  font:clamp(72px,13vw,170px)/.8 Georgia,serif;
+  color:var(--gold2);
+  margin:24px 0 20px;
+  letter-spacing:-.05em;
+}
+
+.hero h2{
+  font:clamp(26px,4vw,54px)/1.05 Georgia,serif;
+  max-width:820px;
+  margin:0 0 25px;
+}
+
+.hero p{
+  max-width:650px;
+  color:var(--muted);
+  font-size:18px;
+}
+
+.actions{
+  display:flex;
+  gap:12px;
+  flex-wrap:wrap;
+  margin:32px 0;
+}
+
+.addresses{
+  color:#cfc2ae;
+  font-size:14px;
+}
+
+.seal{
+  position:absolute;
+  right:4%;
+  bottom:80px;
+  width:180px;
+  height:180px;
+  border:1px solid var(--line);
+  border-radius:50%;
+  display:grid;
+  place-items:center;
+  text-align:center;
+  color:var(--gold2);
+  font:24px Georgia;
+  transform:rotate(-8deg);
+}
+
+section{
+  padding:100px 0;
+  border-bottom:1px solid rgba(201,155,66,.13);
+}
+
+.section-head{
+  display:flex;
+  justify-content:space-between;
+  gap:40px;
+  align-items:end;
+  margin-bottom:45px;
+}
+
+.section-head h2{
+  font:clamp(44px,6vw,78px)/.9 Georgia,serif;
+  color:var(--gold2);
+  margin:0;
+}
+
+.section-head p{
+  max-width:540px;
+  color:var(--muted);
+  margin:0;
+}
+
+.features{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:15px;
+}
+
+.feature,
+.card{
+  padding:28px;
+  background:linear-gradient(145deg,var(--panel2),var(--panel));
+  border:1px solid var(--line);
+  border-radius:14px;
+}
+
+.feature b{
+  display:block;
+  font:27px Georgia;
+  color:var(--gold2);
+  margin-bottom:8px;
+}
+
+.feature span{
+  color:var(--muted);
+  font-size:14px;
+}
+
+.menu-nav{
+  display:flex;
+  gap:8px;
+  flex-wrap:wrap;
+  margin-bottom:35px;
+  position:sticky;
+  top:74px;
+  z-index:20;
+  background:rgba(11,10,9,.93);
+  padding:12px 0;
+}
+
+.menu-nav a{
+  border:1px solid var(--line);
+  border-radius:999px;
+  padding:9px 13px;
+  font-size:13px;
+  color:#d9ccb9;
+}
+
+.menu-nav a:hover{
+  background:var(--gold);
+  color:#17120a;
+}
+
+.category{
+  margin:55px 0;
+  scroll-margin-top:125px;
+}
+
+.cat-title{
+  display:flex;
+  align-items:center;
+  gap:15px;
+  margin-bottom:16px;
+}
+
+.cat-title h3{
+  font:38px Georgia;
+  color:var(--gold2);
+  margin:0;
+}
+
+.cat-title span{
+  height:1px;
+  background:var(--line);
+  flex:1;
+}
+
+.items{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  border-top:1px solid var(--line);
+}
+
+.item{
+  display:flex;
+  justify-content:space-between;
+  gap:20px;
+  padding:18px 4px;
+  border-bottom:1px solid rgba(201,155,66,.15);
+  margin-right:24px;
+}
+
+.item b{
+  font-size:16px;
+}
+
+.item small{
+  display:block;
+  color:#857c70;
+  font-size:12px;
+}
+
+.price{
+  white-space:nowrap;
+  color:var(--gold2);
+  font-weight:700;
+}
+
+.menu-note{
+  margin-top:30px;
+  padding:18px;
+  border:1px dashed var(--line);
+  border-radius:10px;
+  color:#cdbfa9;
+  background:#11100d;
+}
+
+.delivery{
+  background:linear-gradient(135deg,#21190d,#100e0b);
+  border:1px solid var(--line);
+  padding:55px;
+  border-radius:18px;
+}
+
+.delivery h2{
+  font:58px Georgia;
+  color:var(--gold2);
+  margin:8px 0 15px;
+}
+
+.delivery p{
+  max-width:680px;
+  color:var(--muted);
+}
+
+.contact-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:15px;
+}
+
+.contact{
+  padding:30px;
+  border:1px solid var(--line);
+  border-radius:14px;
+  background:var(--panel);
+}
+
+.contact h3{
+  font:28px Georgia;
+  color:var(--gold2);
+  margin-top:0;
+}
+
+.contact p{
+  color:var(--muted);
+}
+
+footer{
+  padding:45px 0 100px;
+  color:#81786b;
+}
+
+.demo-banner{
+  position:fixed;
+  left:14px;
+  bottom:14px;
+  z-index:100;
+  background:#3b2912;
+  color:#f7dfae;
+  border:1px solid var(--gold);
+  padding:10px 14px;
+  border-radius:8px;
+  font-size:11px;
+  font-weight:800;
+  letter-spacing:.08em;
+  box-shadow:0 8px 30px #000;
+}
+
+.watermark{
+  position:fixed;
+  inset:0;
+  z-index:90;
+  pointer-events:none;
+  display:grid;
+  place-items:center;
+  overflow:hidden;
+}
+
+.watermark span{
+  font:900 9vw Arial;
+  color:rgba(255,220,150,.025);
+  transform:rotate(-25deg);
+  white-space:nowrap;
+}
+
+.demo-copy{
+  color:#e2c17e;
+  font-size:12px;
+  letter-spacing:.08em;
+  text-transform:uppercase;
+}
+
+.mobile-cta{
+  display:none;
+}
+
+@media(max-width:800px){
+
+  .links,
+  nav>.btn{
+    display:none;
+  }
+
+  .hero{
+    min-height:650px;
+  }
+
+  .seal{
+    display:none;
+  }
+
+  .features,
+  .contact-grid{
+    grid-template-columns:1fr 1fr;
+  }
+
+  .section-head{
+    display:block;
+  }
+
+  .section-head p{
+    margin-top:18px;
+  }
+
+  .items{
+    grid-template-columns:1fr;
+  }
+
+  .item{
+    margin-right:0;
+  }
+
+  .delivery{
+    padding:30px;
+  }
+
+  .delivery h2{
+    font-size:43px;
+  }
+
+  .menu-nav{
+    top:74px;
+    overflow:auto;
+    flex-wrap:nowrap;
+  }
+
+  .menu-nav a{
+    white-space:nowrap;
+  }
+
+  .mobile-cta{
+    display:flex;
+    position:fixed;
+    bottom:0;
+    left:0;
+    right:0;
+    z-index:80;
+    background:rgba(10,9,8,.96);
+    padding:9px;
+    gap:8px;
+  }
+
+  .mobile-cta a{
+    flex:1;
+    text-align:center;
+  }
+
+  .mobile-cta .btn{
+    padding:12px 8px;
+  }
+
+  .demo-banner{
+    bottom:70px;
+    left:8px;
+  }
+}
+
+@media(max-width:520px){
+
+  .features,
+  .contact-grid{
+    grid-template-columns:1fr;
+  }
+
+  .hero .wrap{
+    padding:80px 0;
+  }
+
+  .hero h1{
+    font-size:82px;
+  }
+
+  .hero:before{
+    inset:12px;
+  }
+
+  .section-head h2{
+    font-size:52px;
+  }
+
+  .cat-title h3{
+    font-size:30px;
+  }
+}
+
+/* Баннер о победе Егора Булдакова — добавлен над полным сайтом кафе */
+.world-banner{position:relative;isolation:isolate;display:flex;align-items:center;min-height:340px;overflow:hidden;border-bottom:1px solid var(--line);background:#17110d}
+.world-banner:before{content:"";position:absolute;z-index:-2;inset:0;background:linear-gradient(90deg,rgba(15,10,7,.96),rgba(15,10,7,.66) 52%,rgba(15,10,7,.2)),url("https://news.store.rambler.ru/img/ba5c83723d94384163aa8fab058c0a63?img-1-resize=width%3A1200%2Cfit%3Amax&img-2-filter=sharpen&img-format=avif") center 40%/cover}
+.world-banner .wrap{padding:55px 0}
+.world-banner .eyebrow{margin-bottom:14px}
+.world-banner h2{font:clamp(38px,6vw,72px)/.98 Georgia,serif;letter-spacing:-.04em;color:var(--cream);max-width:700px;margin:0}
+.world-banner h2 span{color:var(--gold2)}
+.world-banner p{max-width:620px;color:var(--muted);font-size:16px}
+.world-banner .winner-credit{font-size:11px;color:#c7b9a4}
+@media(max-width:620px){.world-banner{min-height:390px}.world-banner:before{background:linear-gradient(0deg,rgba(15,10,7,.96),rgba(15,10,7,.58)),url("https://news.store.rambler.ru/img/ba5c83723d94384163aa8fab058c0a63?img-1-resize=width%3A1200%2Cfit%3Amax&img-2-filter=sharpen&img-format=avif") 58% center/cover}.world-banner .wrap{padding:38px 0}.world-banner p{font-size:14px}}
+
 </style>
 </head>
+
 <body>
-<main class="page">
-<section class="hero" aria-labelledby="hero-title">
-<img class="hero-photo" src="https://news.store.rambler.ru/img/ba5c83723d94384163aa8fab058c0a63?img-1-resize=width%3A1200%2Cfit%3Amax&img-2-filter=sharpen&img-format=avif" alt="Егор Булдаков с победной пиццей" onerror="this.style.display='none'">
-<div class="content">
-<p class="eyebrow">Ческыт №1 · наша гордость</p>
-<h1 id="hero-title">Золото мира.<br><span>Вкус победы.</span></h1>
-<p class="lead">Егор Булдаков — пиццайоло из Ижевска, покоривший мировую сцену современной неаполитанской пиццы.</p>
-<div class="chef">
-<div class="medal" aria-hidden="true">★</div>
-<div><strong>Егор Булдаков</strong><small>Золото Pizza World Cup · 2026</small></div>
+
+<div class="watermark">
+  <span>NEXORA AI · DEMO · CONCEPT</span>
 </div>
-<p class="note">Фото: ИА «Сусанин» / публикация Rambler</p>
+
+<div class="demo-banner">
+  DEMO • КОНЦЕПТ • НЕ ДЛЯ ПУБЛИКАЦИИ
 </div>
+
+
+<section class="world-banner" aria-labelledby="world-title">
+  <div class="wrap">
+    <div class="eyebrow">Ческыт №1 · наша гордость</div>
+    <h2 id="world-title">Золото мира.<br><span>Вкус победы.</span></h2>
+    <p>Егор Булдаков — пиццайоло из Ижевска, завоевавший золото Pizza World Cup 2026 в категории современной неаполитанской пиццы.</p>
+    <div class="winner-credit">Фото: ИА «Сусанин» / публикация Rambler</div>
+  </div>
 </section>
-<section class="concept" aria-labelledby="concept-title">
-<div class="tag">Ческыт №1</div>
-<h2 id="concept-title">Концепт сайта</h2>
-<p>Идея кафе, где локальный характер встречается с большой гастрономией.</p>
+
+<header class="top">
+  <nav class="wrap">
+
+    <a class="logo" href="#top">
+      ЧЕСКЫТ
+      <small>№1 · КАФЕ</small>
+    </a>
+
+    <div class="links">
+      <a href="#about">О кафе</a>
+      <a href="#menu">Меню</a>
+      <a href="#delivery">Доставка</a>
+      <a href="#contacts">Контакты</a>
+    </div>
+
+    <a class="btn" href="#menu">
+      Открыть меню
+    </a>
+
+  </nav>
+</header>
+
+<main id="top">
+
+<section class="hero">
+
+  <div class="wrap">
+
+    <div class="eyebrow">
+      Концепт сайта · Ижевск
+    </div>
+
+    <h1>ЧЕСКЫТ</h1>
+
+    <h2>
+      ВКУС, КОТОРЫЙ ХОЧЕТСЯ ПОВТОРИТЬ
+    </h2>
+
+    <p>
+      Концепт современного сайта кафе «Ческыт №1»:
+      удмуртская кухня, любимые блюда, семейный формат,
+      еда с собой и доставка.
+    </p>
+
+    <div class="actions">
+      <a class="btn" href="#menu">
+        Посмотреть меню
+      </a>
+
+      <a class="btn ghost" href="#delivery">
+        Доставка
+      </a>
+    </div>
+
+    <div class="addresses">
+      Клубная, 16 к2 · Удмуртская, 304А
+    </div>
+
+    <div class="seal">
+      ЧЕСКЫТ<br>
+      <small>№1</small>
+    </div>
+
+  </div>
+
 </section>
+
+<section id="about">
+
+  <div class="wrap">
+
+    <div class="section-head">
+
+      <h2>Про кафе</h2>
+
+      <p>
+        Здесь можно рассказать историю кафе,
+        показать атмосферу, команду, интерьер
+        и реальные фотографии после согласования проекта.
+      </p>
+
+    </div>
+
+    <div class="features">
+
+      <div class="feature">
+        <b>Удмуртская кухня</b>
+        <span>
+          Перепечи, табани, пельмени
+          и традиционные блюда.
+        </span>
+      </div>
+
+      <div class="feature">
+        <b>Для всей семьи</b>
+        <span>
+          Детское меню и уютный формат
+          для семейного отдыха.
+        </span>
+      </div>
+
+      <div class="feature">
+        <b>Еда с собой</b>
+        <span>
+          Любимые блюда можно забрать
+          с собой.
+        </span>
+      </div>
+
+      <div class="feature">
+        <b>Доставка</b>
+        <span>
+          Заказ домой или в офис
+          по телефону.
+        </span>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+<section id="menu">
+
+  <div class="wrap">
+
+    <div class="section-head">
+
+      <h2>Полное меню</h2>
+
+      <p>
+        Меню перенесено из предоставленного макета.
+        В готовой версии цены, состав и наличие
+        можно заменить на актуальные данные кафе.
+      </p>
+
+    </div>
+
+    <div class="menu-nav">
+
+      <a href="#udm">Удмуртская</a>
+      <a href="#breakfast">Завтраки</a>
+      <a href="#soups">Супы</a>
+      <a href="#salads">Салаты</a>
+      <a href="#hot">Горячее</a>
+      <a href="#grill">Мангал</a>
+      <a href="#plov">Казан</a>
+      <a href="#pizza">Пицца</a>
+      <a href="#sushi">Суши</a>
+      <a href="#dessert">Десерты</a>
+      <a href="#drinks">Напитки</a>
+      <a href="#kids">Детское</a>
+
+    </div>
+
+    <!-- УДМУРТСКАЯ КУХНЯ -->
+
+    <div class="category" id="udm">
+
+      <div class="cat-title">
+        <h3>Удмуртская кухня</h3>
+        <span></span>
+      </div>
+
+      <div class="items">
+
+        <div class="item">
+          <div>
+            <b>Перепечи с мясом</b>
+            <small>
+              традиционные удмуртские открытые пирожки
+            </small>
+          </div>
+          <span class="price">59 ₽</span>
+        </div>
+
+        <div class="item">
+          <div>
+            <b>Перепечи с картофелем</b>
+            <small>традиционные удмуртские</small>
+          </div>
+          <span class="price">49 ₽</span>
+        </div>
+
+        <div class="item">
+          <div>
+            <b>Табани с мясом</b>
+            <small>лепёшка с мясом, луком и зеленью</small>
+          </div>
+          <span class="price">239 ₽</span>
+        </div>
+
+        <div class="item">
+          <div>
+            <b>Табани с грибами</b>
+            <small>лепёшка с грибами и сыром</small>
+          </div>
+          <span class="price">199 ₽</span>
+        </div>
+
+        <div class="item">
+          <div>
+            <b>Пельмени с бульоном</b>
+            <small>домашние пельмени с ароматным бульоном</small>
+          </div>
+          <span class="price">259 ₽</span>
+        </div>
+
+        <div class="item">
+          <div>
+            <b>Пельмени с мясом в горшочке</b>
+            <small>с сыром, зеленью и овощами</small>
+          </div>
+          <span class="price">289 ₽</span>
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- ЗАВТРАКИ -->
+
+    <div class="category" id="breakfast">
+
+      <div class="cat-title">
+        <h3>Завтраки</h3>
+        <span></span>
+      </div>
+
+      <div class="items">
+
+        <div class="item">
+          <b>Глазунья из 2 яиц</b>
+          <span class="price">99 ₽</span>
+        </div>
+
+        <div class="item">
+          <b>Омлет с ветчиной</b>
+          <span class="price">129 ₽</span>
+        </div>
+
+        <div class="item">
+          <b>Омлет с овощами</b>
+          <span class="price">129 ₽</span>
+        </div>
+
+        <div class="item">
+          <b>Каша овсяная</b>
+          <span class="price">99 ₽</span>
+        </div>
+
+        <div class="item">
+          <b>Каша рисовая</b>
+          <span class="price">99 ₽</span>
+        </div>
+
+        <div class="item">
+          <b>Сырники со сметаной</b>
+          <span class="price">149 ₽</span>
+        </div>
+
+        <div class="item">
+          <b>Блинчики со сметаной</b>
+          <span class="price">129 ₽</span>
+        </div>
+
+        <div class="item">
+          <b>Блинчики с творогом</b>
+          <span class="price">149 ₽</span>
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- СУПЫ -->
+
+    <div class="category" id="soups">
+
+      <div class="cat-title">
+        <h3>Супы</h3>
+        <span></span>
+      </div>
+
+      <div class="items">
+
+        <div class="item">
+          <b>Солянка сборная мясная</b>
+          <span class="price">159 ₽</span>
+        </div>
+
+        <div class="item">
+          <b>Борщ со сметаной</b>
+          <span class="price">129 ₽</span>
+        </div>
+
+        <div class="item">
+          <b>Рассольник</b>
+          <span class="price">199 ₽</span>
+        </div>
+
+        <div class="item">
+          <b>Куриный суп с домашней лапшой</b>
+          <span class="price">129 ₽</span>
+        </div>
+
+        <div class="item">
+          <b>Уха из семги</b>
+          <span class="price">249 ₽</span>
+        </div>
+
+        <div class="item">
+          <b>Грибной крем-суп</b>
+          <span class="price">159 ₽</span>
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- САЛАТЫ -->
+
+    <div class="category" id="salads">
+
+      <div class="cat-title">
+        <h3>Салаты</h3>
+        <span></span>
+      </div>
+
+      <div class="items">
+
+        <div class="item">
+          <b>Салат Цезарь с курицей</b>
+          <span class="price">159 ₽</span>
+        </div>
+
+        <div class="item">
+          <b>Салат Цезарь с креветками</b>
+          <span class="price">199 ₽</span>
+        </div>
+
+        <div class="item">
+          <b>Греческий салат</b>
+          <span class="price">139 ₽</span>
+        </div>
+
+        <div class="item">
+          <b>Оливье с ветчиной</b>
+          <span class="price">129 ₽</span>
+        </div>
+
+        <div class="item">
+          <b>Салат с куриной грудкой</b>
+          <span class="price">159 ₽</span>
+        </div>
+
+        <div class="item">
+          <b>Салат с языком</b>
+          <span class="price">189 ₽</span>
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- ГОРЯЧИЕ БЛЮДА -->
+
+    <div class="category" id="hot">
+
+      <div class="cat-title">
+        <h3>Горячие блюда</h3>
+        <span></span>
+      </div>
+
+      <div class="items">
+
+        <div class="item">
+          <b>Куриное филе с грибами</b>
+          <span class="price">239 ₽</span>
+        </div>
+
+        <div class="item">
+          <b>Свинина по-французски</b>
+          <span class="price">279 ₽</span>
+        </div>
+
+        <div class="item">
+          <b>Бефстроганов</b>
+          <span class="price">259 ₽</span>
+        </div>
+
+        <div class="item">
+          <b>Котлета по-киевски</b>
+          <span class="price">219 ₽</span>
+        </div>
+
+        <div class="item">
+          <b>Курица в сливочном соусе</b>
+          <span class="price">239 ₽</span>
+        </div>
+
+        <div class="item">
+          <b>Говядина с овощами</b>
+          <span class="price">279 ₽</span>
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- МАНГАЛ -->
+
+    <div class="category" id="grill">
+
+      <div class="cat-title">
+        <h3>Шашлык и мангал</h3>
+        <span></span>
+      </div>
+
+      <div class="items">
+
+        <div class="item">
+          <b>Шашлык из свинины</b>
+          <span class="price">199 ₽</span>
+        </div>
+
+        <div class="item">
+          <b>Шашлык из курицы</b>
+          <span class="price">179 ₽</span>
+        </div>
+
+        <div class="item">
+          <b>Люля-кебаб из свинины</b>
+          <span class="price">199 ₽</span>
+        </div>
+
+        <div class="item">
+          <b>Люля-кебаб из курицы</b>
+          <span class="price">179 ₽</span>
+        </div>
+
+        <div class="item">
+          <b>Крылья на мангале</b>
+          <span class="price">169 ₽</span>
+        </div>
+
+        <div class="item">
+          <b>Овощи на гриле</b>
+          <span class="price">149 ₽</span>
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- КАЗАН -->
+
+    <div class="category" id="plov">
+
+      <div class="cat-title">
+        <h3>Плов / блюда в казане</h3>
+        <span></span>
+      </div>
+
+      <div class="items">
+
+        <div class="item">
+          <b>Плов узбекский</b>
+          <span class="price">229 ₽</span>
+        </div>
+
+        <div class="item">
+          <b>Плов с курицей</b>
+          <span class="price">199 ₽</span>
+        </div>
+
+        <div class="item">
+          <b>Плов с говядиной</b>
+          <span class="price">259 ₽</span>
+        </div>
+
+        <div class="item">
+          <b>Шурпа из говядины</b>
+          <span class="price">199 ₽</span>
+        </div>
+
+        <div class="item">
+          <b>Дымляма</b>
+          <span class="price">249 ₽</span>
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- ПИЦЦА -->
+
+    <div class="category" id="pizza">
+
+      <div class="cat-title">
+        <h3>Пицца</h3>
+        <span></span>
+      </div>
+
+      <div class="items">
+
+        <div class="item">
+          <b>Маргарита</b>
+          <span class="price">349 ₽</span>
+        </div>
+
+        <div class="item">
+          <b>Пепперони</b>
+          <span class="price">399 ₽</span>
+        </div>
+
+        <div class="item">
+          <b>С ветчиной и грибами</b>
+          <span class="price">399 ₽</span>
+        </div>
+
+        <div class="item">
+          <b>Четыре сыра</b>
+          <span class="price">419 ₽</span>
+        </div>
+
+        <div class="item">
+          <b>Курица барбекю</b>
+          <span class="price">399 ₽</span>
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- СУШИ -->
+
+    <div class="category" id="sushi">
+
+      <div class="cat-title">
+        <h3>Суши</h3>
+        <span></span>
+      </div>
+
+      <div class="items">
+
+        <div class="item">
+          <b>Филадельфия</b>
+          <span class="price">359 ₽</span>
+        </div>
+
+        <div class="item">
+          <b>Калифорния</b>
+          <span class="price">299 ₽</span>
+        </div>
+
+        <div class="item">
+          <b>Дракон</b>
+          <span class="price">399 ₽</span>
+        </div>
+
+        <div class="item">
+          <b>Запечённый лосось</b>
+          <span class="price">319 ₽</span>
+        </div>
+
+        <div class="item">
+          <b>Сет Ческыт</b>
+          <span class="price">899 ₽</span>
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- ДЕСЕРТЫ -->
+
+    <div class="category" id="dessert">
+
+      <div class="cat-title">
+        <h3>Десерты</h3>
+        <span></span>
+      </div>
+
+      <div class="items">
+
+        <div class="item">
+          <b>Чизкейк</b>
+          <span class="price">149 ₽</span>
+        </div>
+
+        <div class="item">
+          <b>Шоколадный фондан</b>
+          <span class="price">199 ₽</span>
+        </div>
+
+        <div class="item">
+          <b>Медовик</b>
+          <span class="price">149 ₽</span>
+        </div>
+
+        <div class="item">
+          <b>Тирамису</b>
+          <span class="price">199 ₽</span>
+        </div>
+
+        <div class="item">
+          <b>Мороженое (шарик)</b>
+          <span class="price">69 ₽</span>
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- НАПИТКИ -->
+
+    <div class="category" id="drinks">
+
+      <div class="cat-title">
+        <h3>Напитки</h3>
+        <span></span>
+      </div>
+
+      <div class="items">
+
+        <div class="item">
+          <b>Американо</b>
+          <span class="price">79 ₽</span>
+        </div>
+
+        <div class="item">
+          <b>Латте</b>
+          <span class="price">99 ₽</span>
+        </div>
+
+        <div class="item">
+          <b>Капучино</b>
+          <span class="price">99 ₽</span>
+        </div>
+
+        <div class="item">
+          <b>Чай чёрный / зелёный</b>
+          <span class="price">29 ₽</span>
+        </div>
+
+        <div class="item">
+          <b>Морс</b>
+          <span class="price">69 ₽</span>
+        </div>
+
+        <div class="item">
+          <b>Сок с апельсином</b>
+          <span class="price">69 ₽</span>
+        </div>
+
+        <div class="item">
+          <b>Вода без газа</b>
+          <span class="price">49 ₽</span>
+        </div>
+
+        <div class="item">
+          <b>Вода газированная</b>
+          <span class="price">49 ₽</span>
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- ДЕТСКОЕ -->
+
+    <div class="category" id="kids">
+
+      <div class="cat-title">
+        <h3>Детское меню</h3>
+        <span></span>
+      </div>
+
+      <div class="items">
+
+        <div class="item">
+          <b>Куриный суп с лапшой</b>
+          <span class="price">99 ₽</span>
+        </div>
+
+        <div class="item">
+          <b>Котлета куриная с пюре</b>
+          <span class="price">129 ₽</span>
+        </div>
+
+        <div class="item">
+          <b>Пельмешки детские</b>
+          <span class="price">129 ₽</span>
+        </div>
+
+        <div class="item">
+          <b>Макароны с сыром</b>
+          <span class="price">99 ₽</span>
+        </div>
+
+        <div class="item">
+          <b>Блинчик с творогом</b>
+          <span class="price">99 ₽</span>
+        </div>
+
+        <div class="item">
+          <b>Сок детский</b>
+          <span class="price">49 ₽</span>
+        </div>
+
+      </div>
+
+    </div>
+
+    <div class="menu-note">
+      <strong>КОНЦЕПТ / ДЕМО:</strong>
+      этот сайт создан как презентационный макет NEXORA AI.
+      Информация, цены, фотографии, тексты и оформление
+      являются частью демонстрации и требуют согласования
+      с кафе. Публичное использование, передача сайта
+      и подготовка к реальному запуску — отдельный этап проекта.
+    </div>
+
+  </div>
+
+</section>
+
+<section id="delivery">
+
+  <div class="wrap">
+
+    <div class="delivery">
+
+      <div class="eyebrow">
+        Быстро · вкусно · удобно
+      </div>
+
+      <h2>Доставка</h2>
+
+      <p>
+        Доставим любимые блюда домой или в офис.
+        В готовой версии здесь можно подключить
+        полноценную форму заказа, мессенджеры
+        и онлайн-заявки.
+      </p>
+
+      <a class="btn" href="tel:+79127565555">
+        +7 (912) 756-55-55
+      </a>
+
+    </div>
+
+  </div>
+
+</section>
+
+<section id="contacts">
+
+  <div class="wrap">
+
+    <div class="section-head">
+
+      <h2>Контакты</h2>
+
+      <p>
+        Блок подготовлен для будущего
+        полноценного сайта кафе.
+      </p>
+
+    </div>
+
+    <div class="contact-grid">
+
+      <div class="contact">
+        <h3>Клубная, 16 к2</h3>
+        <p>Ижевск</p>
+      </div>
+
+      <div class="contact">
+        <h3>Удмуртская, 304А</h3>
+        <p>Ижевск</p>
+      </div>
+
+      <div class="contact">
+        <h3>Доставка</h3>
+
+        <p>
+          <a href="tel:+79127565555">
+            +7 (912) 756-55-55
+          </a>
+        </p>
+
+        <p>@cheskyt_1</p>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
 </main>
+
+<footer>
+
+  <div class="wrap">
+
+    <div class="demo-copy">
+      NEXORA AI · презентационный концепт
+    </div>
+
+    <p>
+      Этот сайт создан для демонстрации возможного решения.
+      Он не является официальным сайтом кафе «Ческыт №1»
+      и не предназначен для самостоятельного коммерческого
+      использования без согласования и заказа готовой версии.
+    </p>
+
+  </div>
+
+</footer>
+
+<div class="mobile-cta">
+
+  <a class="btn" href="#menu">
+    Меню
+  </a>
+
+  <a class="btn" href="tel:+79127565555">
+    Позвонить
+  </a>
+
+</div>
+
 </body>
 </html>
