@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#17120f">
+<title>Ческыт №1 — концепт сайта</title>
+<style>
+:root{color-scheme:dark;--gold:#f4c66a;--cream:#fff7e9;--muted:#d5c8b6}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:#17120f;color:var(--cream);font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
+.page{width:min(1180px,100% - 32px);margin:0 auto}
+.hero{position:relative;isolation:isolate;display:flex;align-items:flex-end;min-height:clamp(430px,57vw,650px);margin:22px auto 0;overflow:hidden;border:1px solid #ffffff20;border-radius:26px;background:radial-gradient(ellipse at 72% 20%,#b56a27 0,transparent 40%),linear-gradient(115deg,#24160f,#63391f 54%,#18110d);box-shadow:0 24px 80px #0007}
+.hero-photo{position:absolute;z-index:-2;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 40%;opacity:.88}
+.hero:after{content:"";position:absolute;z-index:-1;inset:0;background:linear-gradient(90deg,rgba(18,12,9,.94) 0%,rgba(18,12,9,.77) 38%,rgba(18,12,9,.18) 100%),linear-gradient(0deg,rgba(18,12,9,.68),transparent 48%)}
+.content{max-width:690px;padding:clamp(26px,6vw,68px)}
+.eyebrow{display:inline-flex;align-items:center;gap:10px;margin:0 0 22px;color:var(--gold);font-size:12px;font-weight:800;letter-spacing:.18em;text-transform:uppercase}
+.eyebrow:before{content:"";width:28px;height:1px;background:var(--gold)}
+h1{max-width:680px;margin:0;font-size:clamp(38px,6.5vw,76px);line-height:.98;letter-spacing:-.055em;text-wrap:balance}
+h1 span{color:var(--gold)}
+.lead{max-width:490px;margin:24px 0 0;color:#f1e6d7;font-size:clamp(16px,2vw,19px);line-height:1.65}
+.chef{display:flex;align-items:center;gap:14px;margin-top:30px}
+.medal{display:grid;place-items:center;width:48px;height:48px;flex:0 0 48px;border:1px solid #f4c66a88;border-radius:50%;color:var(--gold);font-size:23px}
+.chef strong{display:block;font-size:16px;letter-spacing:.01em}
+.chef small{display:block;margin-top:5px;color:var(--muted);font-size:13px;line-height:1.5}
+.note{margin:10px 0 0;color:#d6c7b6;font-size:11px}
+.concept{padding:54px 0 70px;text-align:center}
+.concept .tag{color:var(--gold);font-size:11px;font-weight:800;letter-spacing:.2em;text-transform:uppercase}
+.concept h2{margin:12px 0 10px;font-size:clamp(28px,4vw,42px);letter-spacing:-.04em}
+.concept p{max-width:540px;margin:0 auto;color:var(--muted);font-size:15px;line-height:1.7}
+@media(max-width:620px){.page{width:min(100% - 20px,1180px)}.hero{min-height:560px;margin-top:10px;border-radius:19px}.hero-photo{object-position:58% center}.hero:after{background:linear-gradient(0deg,rgba(18,12,9,.96) 0%,rgba(18,12,9,.76) 45%,rgba(18,12,9,.12) 100%)}.content{padding:28px 23px 32px}.eyebrow{margin-bottom:17px;font-size:10px}h1{font-size:clamp(39px,11vw,56px)}.lead{margin-top:17px;font-size:15px}.chef{margin-top:22px}.concept{padding:42px 8px 55px}}
+</style>
+</head>
+<body>
+<main class="page">
+<section class="hero" aria-labelledby="hero-title">
+<img class="hero-photo" src="https://news.store.rambler.ru/img/ba5c83723d94384163aa8fab058c0a63?img-1-resize=width%3A1200%2Cfit%3Amax&img-2-filter=sharpen&img-format=avif" alt="Егор Булдаков с победной пиццей" onerror="this.style.display='none'">
+<div class="content">
+<p class="eyebrow">Ческыт №1 · наша гордость</p>
+<h1 id="hero-title">Золото мира.<br><span>Вкус победы.</span></h1>
+<p class="lead">Егор Булдаков — пиццайоло из Ижевска, покоривший мировую сцену современной неаполитанской пиццы.</p>
+<div class="chef">
+<div class="medal" aria-hidden="true">★</div>
+<div><strong>Егор Булдаков</strong><small>Золото Pizza World Cup · 2026</small></div>
+</div>
+<p class="note">Фото: ИА «Сусанин» / публикация Rambler</p>
+</div>
+</section>
+<section class="concept" aria-labelledby="concept-title">
+<div class="tag">Ческыт №1</div>
+<h2 id="concept-title">Концепт сайта</h2>
+<p>Идея кафе, где локальный характер встречается с большой гастрономией.</p>
+</section>
+</main>
+</body>
+</html>
